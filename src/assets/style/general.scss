@@ -1,9 +1,10 @@
-@import "~fontsource-muli/index.css";
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~bootstrap-vue/dist/bootstrap-vue.css";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import "./vars.scss";
 
 body {
-    font-family: "Muli", sans-serif;
+    font-family: $font-primary;
 }
 
 /* BUTTON STYLE */
@@ -15,4 +16,17 @@ body {
     padding: 20px 35px;
     border: 1px solid red;
     text-transform: uppercase;
+}
+
+/* TITLE STYLE */
+.ls-title {
+    font-size: 60px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.ls-title__italic {
+    font-family: $font-secondary;
+    font-style: italic;
+    font-weight: bold;
 }
