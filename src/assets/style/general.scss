@@ -5,3 +5,14 @@
 body {
     font-family: "Muli", sans-serif;
 }
+
+/* BUTTON STYLE */
+.ls-button-text {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    display: inline-block;
+    padding: 20px 35px;
+    border: 1px solid red;
+    text-transform: uppercase;
+}

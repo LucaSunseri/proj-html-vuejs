@@ -1,0 +1,58 @@
+<template>
+    <div>
+        <div class="ls-box">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+                <div class="col" v-for="item in items" :key="item.id">
+                    <img
+                        :src="require(`../../assets/img/${item.image}`)"
+                        :alt="item.hover.title"
+                    />
+                    <div class="ls-box__hover">
+                        <h3>{{ item.hover.title }}</h3>
+                        <p>{{ item.hover.sub }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import items from "../../assets/data/Illustrate";
+
+export default {
+    name: "IllustrateSection",
+    data() {
+        return {
+            items,
+            hover: false,
+        };
+    },
+};
+</script>
+
+<style lang="scss" scoped>
+.ls-box {
+    .row {
+        --bs-gutter-x: 0;
+    }
+    .col {
+        position: relative;
+        &:hover .ls-box__hover {
+            display: block;
+        }
+    }
+    img {
+        width: 100%;
+    }
+}
+
+.ls-box__hover {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background-color: white;
+}
+</style>
