@@ -1,16 +1,11 @@
 <template>
-    <div>
-        Main
-    </div> 
+    <div class="ls-main">MAIN</div>
 </template>
 
 <script>
 export default {
-    name: 'Main'
-
-}
+    name: "Main",
+};
 </script>
 
-<style lang:"scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
