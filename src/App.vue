@@ -4,6 +4,7 @@
         <Carousel />
         <Main />
         <Footer />
+        <Arrow />
     </div>
 </template>
 
@@ -12,6 +13,7 @@ import Header from "./components/Header.vue";
 import Carousel from "./components/Carousel.vue";
 import Main from "./components/Main.vue";
 import Footer from "./components/Footer.vue";
+import Arrow from "./components/general/Arrow.vue";
 
 export default {
     name: "App",
@@ -20,6 +22,7 @@ export default {
         Carousel,
         Main,
         Footer,
+        Arrow,
     },
 };
 </script>

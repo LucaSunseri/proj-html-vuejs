@@ -9,6 +9,9 @@
         <section>
             <ContactSection />
         </section>
+        <section>
+            <PostSection />
+        </section>
     </div>
 </template>
 
@@ -16,6 +19,7 @@
 import IllustrateSection from "./main-components/IllustrateSection.vue";
 import ProcessSection from "./main-components/ProcessSection.vue";
 import ContactSection from "./main-components/ContactSection.vue";
+import PostSection from "./main-components/PostSection.vue";
 
 export default {
     name: "Main",
@@ -23,6 +27,7 @@ export default {
         IllustrateSection,
         ProcessSection,
         ContactSection,
+        PostSection,
     },
 };
 </script>
