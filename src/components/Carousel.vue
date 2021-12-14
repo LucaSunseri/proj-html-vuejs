@@ -2,6 +2,7 @@
     <div class="ls-carousel">
         <div class="container">
             <div class="row">
+                <!-- Section Text -->
                 <div class="col-12 col-lg-6 ls-carousel__text">
                     <h2>
                         {{ slide[counter].text.title }}
@@ -14,6 +15,7 @@
                         <span class="ls-button-text">Read more</span>
                     </div>
                 </div>
+                <!-- Section Image -->
                 <div class="col-12 col-lg-6 ls-carousel__image">
                     <img
                         v-for="(image, key) in slide[counter].imageCenter"
@@ -34,6 +36,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Section Control -->
             <div class="ls-carousel__button-side d-none d-lg-block">
                 <i @click="slidePrev" class="fas fa-chevron-circle-left"></i>
                 <i @click="slideNext" class="fas fa-chevron-circle-right"></i>
@@ -61,7 +64,7 @@ export default {
     mounted() {
         setInterval(() => {
             this.slideNext();
-        }, 3000);
+        }, 40000); //! Sitsemare il tempo
     },
     methods: {
         slideNext() {
