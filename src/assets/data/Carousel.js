@@ -10,48 +10,48 @@ export default [
         "imageAbsolute": {
             "image1": {
                 "image": "short-slider-rev-1-img-2.png",
-                "top": "3%",
-                "left": "3%",  
+                "top": "30%",
+                "left": "0%",
             }, 
             "image2": {
                 "image": "short-slider-rev-1-img-1.png",
-                "top": "50%",
-                "left": "-10%",  
+                "top": "65%",
+                "left": "-15%",
             }, 
             "image3": {
                 "image": "short-slider-rev-1-img-7.png",
-                "top": "80%",
-                "left": "0%",
+                "top": "75%",
+                "left": "10%",
             }, 
             "image4": {
-                "image": "short-slider-rev-1-img-4.png",
-                "top": "-10%",
-                "left": "80%", 
+                "image": "short-slider-rev-1-img-5.png",
+                "top": "18.5%",
+                "left": "85%", 
             }, 
             "image5": {
-                "image": "short-slider-rev-1-img-5.png",
-                "top": "15%",
-                "left": "90%", 
+                "image": "short-slider-rev-1-img-4.png",
+                "top": "20%",
+                "left": "80%",
             }, 
             "image6": {
                 "image": "short-slider-rev-1-img-6.png",
-                "top": "80%",
-                "left": "100%",
+                "top": "35%",
+                "left": "88%",
             }, 
             "image7": {
                 "image": "short-slider-rev-1-img-8.png",
-                "top": "80%",
-                "left": "100%",
+                "top": "72%",
+                "left": "80%",
             }, 
             "image8": {
                 "image": "short-slider-rev-1-img-9.png",
-                "top": "80%",
-                "left": "100%",
+                "top": "50%",
+                "left": "90%",
             }, 
             "image9": {
                 "image": "short-slider-rev-1-img-10.png",
-                "top": "80%",
-                "left": "100%",
+                "top": "78%",
+                "left": "105%",
             }, 
         },
         "text": {
@@ -71,18 +71,18 @@ export default [
         "imageAbsolute": {
             "image1": {
                 "image": "short-slider-rev-1-img-2.png",
-                "top": "3%",
-                "left": "3%",  
+                "top": "20%",
+                "left": "-5%",  
             }, 
             "image2": {
                 "image": "h-2-slider-img-12.png",
-                "top": "50%",
+                "top": "75%",
                 "left": "-10%",  
             }, 
             "image3": {
                 "image": "h-2-slider-img-13.png",
-                "top": "80%",
-                "left": "0%",
+                "top": "70%",
+                "left": "10%",
             }, 
             "image4": {
                 "image": "short-slider-rev-1-img-6.png",
@@ -91,8 +91,8 @@ export default [
             }, 
             "image5": {
                 "image": "h-2-slider-img-14.png",
-                "top": "15%",
-                "left": "90%", 
+                "top": "75%",
+                "left": "85%", 
             }, 
         },
         "text": {
@@ -116,33 +116,33 @@ export default [
         "imageAbsolute": {
             "image1": {
                 "image": "short-slider-rev-1-img-2.png",
-                "top": "3%",
+                "top": "10%",
                 "left": "3%",  
             }, 
             "image2": {
                 "image": "h-2-slider-img-12.png",
-                "top": "50%",
+                "top": "64%",
                 "left": "-10%",  
             }, 
             "image3": {
                 "image": "h-2-slider-img-13.png",
-                "top": "80%",
-                "left": "0%",
+                "top": "65%",
+                "left": "2%",
             }, 
             "image4": {
                 "image": "h-2-slider-img-14.png",
-                "top": "-10%",
+                "top": "10%",
                 "left": "80%", 
             }, 
             "image5": {
                 "image": "short-slider-rev-1-img-6.png",
-                "top": "15%",
+                "top": "20%",
                 "left": "90%", 
             }, 
             "image6": {
                 "image": "h-2-slider-img-17.png",
-                "top": "80%",
-                "left": "100%",
+                "top": "57%",
+                "left": "95%",
             }, 
         },
         "text": {

@@ -1,7 +1,7 @@
 <template>
     <div>
         <Header />
-        <CarouselProva />
+        <Carousel />
         <Main />
         <Footer />
         <Arrow />
@@ -10,7 +10,7 @@
 
 <script>
 import Header from "./components/Header.vue";
-import CarouselProva from "./components/CarouselProva.vue";
+import Carousel from "./components/Carousel.vue";
 import Main from "./components/Main.vue";
 import Footer from "./components/Footer.vue";
 import Arrow from "./components/general/Arrow.vue";
@@ -19,7 +19,7 @@ export default {
     name: "App",
     components: {
         Header,
-        CarouselProva,
+        Carousel,
         Main,
         Footer,
         Arrow,
