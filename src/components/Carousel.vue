@@ -105,13 +105,17 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     h2 {
         font-size: 80px;
         font-weight: 400;
     }
     p {
         color: $color-secondary;
+    }
+    .ls-button-text {
+        border: 3px solid #e1c0b0;
+        padding: 20px 40px;
+        margin-top: 15px;
     }
 }
 

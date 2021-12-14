@@ -36,6 +36,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/style/vars.scss";
+
 .ls-footer {
     background-color: #c0e1cf;
     padding: 80px 0;
@@ -44,7 +46,7 @@ export default {
         margin: 8px 0;
     }
     a {
-        color: black;
+        color: $color-primary;
     }
     .fab {
         font-size: 18px;

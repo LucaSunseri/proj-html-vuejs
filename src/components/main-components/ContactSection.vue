@@ -31,11 +31,16 @@ export default {
     background-image: url(../../assets/img/h-2-background-1.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    padding: 155px 0;
+    padding: 140px 0;
     p {
         font-size: 20px;
         color: $color-secondary;
         text-align: center;
+    }
+    .ls-button-text {
+        background-color: #d8f0e3;
+        padding: 20px 80px;
+        margin-top: 30px;
     }
 }
 </style>

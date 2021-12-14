@@ -2,11 +2,16 @@
     <div class="container">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
             <div class="col ls-box" v-for="post in posts" :key="post.id">
+                <!-- Box TOP containing image -->
                 <div class="ls-box__top">
-                    <img
-                        :src="require(`../../assets/img/${post.image}`)"
-                        :alt="post.alt"
-                    />
+                    <div class="ls-box__top-image">
+                        <img
+                            :src="require(`../../assets/img/${post.image}`)"
+                            :alt="post.alt"
+                        />
+                    </div>
+
+                    <!-- Box in posiction absolute containing date -->
                     <div class="ls-box__top-date">
                         <div class="ls-day">
                             <span>{{ post.date.day }}</span>
@@ -16,11 +21,13 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Box BOTTOM containing text -->
                 <div class="ls-box__bottom">
                     <h3>
                         <a href="#">{{ post.text.title }}</a>
                     </h3>
-                    <p>By {{ post.text.author }}</p>
+                    <p class="ls-italic">By {{ post.text.author }}</p>
                 </div>
             </div>
         </div>
@@ -43,10 +50,23 @@ export default {
 <style lang="scss" scoped>
 @import "../../assets/style/vars.scss";
 
+.ls-box {
+    margin-bottom: 30px;
+}
+
 .ls-box__top {
     position: relative;
-    img {
-        width: 100%;
+    cursor: pointer;
+    .ls-box__top-image {
+        overflow: hidden;
+        img {
+            width: 100%;
+            transform: scale(1);
+            transition: all 0.8s ease-in-out;
+        }
+        &:hover img {
+            transform: scale(1.1);
+        }
     }
 }
 
@@ -71,9 +91,11 @@ export default {
 }
 
 .ls-box__bottom {
+    margin-top: 15px;
     a {
         text-decoration: none;
         color: black;
+        font-weight: 300;
     }
 }
 </style>
