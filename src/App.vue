@@ -5,21 +5,23 @@
         <Main />
         <Footer />
         <ButtonFixed
+            class="d-none d-md-block"
             :image="'shop1.svg'"
             :alt="'Wheel'"
             :widthimg="'90%'"
             :background="'#ee2852'"
-            :bottom="'570px'"
+            :bottom="'80%'"
             :right="'0px'"
             :width="'2.4rem'"
             :height="'2.4rem'"
         />
         <ButtonFixed
+            class="d-none d-md-block"
             :image="'shop2.svg'"
             :alt="'Shopping Cart'"
             :widthimg="'60%'"
             :background="'#fff'"
-            :bottom="'518px'"
+            :bottom="'73%'"
             :right="'0px'"
             :width="'2.4rem'"
             :height="'2.4rem'"

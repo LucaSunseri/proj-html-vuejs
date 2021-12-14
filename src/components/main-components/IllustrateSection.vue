@@ -32,7 +32,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/style/vars.scss";
+
 .ls-box {
+    cursor: pointer;
     .row {
         --bs-gutter-x: 0;
     }
@@ -53,6 +56,11 @@ export default {
     top: 50%;
     transform: translateY(-50%);
     left: 0;
+    padding: 10px 30px;
     background-color: white;
+    p {
+        font-family: $font-secondary;
+        font-style: italic;
+    }
 }
 </style>

@@ -1,12 +1,15 @@
 <template>
-    <div
-        :style="`width: ${width}; height: ${height}; bottom: ${bottom}; right: ${right}; background-color: ${background}`"
-    >
-        <img
-            :src="require(`../../assets/svg/${image}`)"
-            :alt="alt"
-            :style="`width: ${widthimg}`"
-        />
+    <div>
+        <div
+            class="ls-custom"
+            :style="`width: ${width}; height: ${height}; bottom: ${bottom}; right: ${right}; background-color: ${background}`"
+        >
+            <img
+                :src="require(`../../assets/svg/${image}`)"
+                :alt="alt"
+                :style="`width: ${widthimg}`"
+            />
+        </div>
     </div>
 </template>
 
@@ -27,7 +30,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-div {
+.ls-custom {
     position: fixed;
     display: flex;
     justify-content: center;
