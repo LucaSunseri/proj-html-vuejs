@@ -31,7 +31,7 @@ export default {
     background-image: url(../../assets/img/h-2-background-1.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    padding: 140px 0;
+    padding: 10% 0;
     p {
         font-size: 20px;
         color: $color-secondary;

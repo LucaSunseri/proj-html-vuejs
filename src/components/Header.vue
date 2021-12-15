@@ -1,9 +1,11 @@
 <template>
     <div class="ls-header">
+        <!-- Header left with LOGO  -->
         <div class="ls-header__left">
             <img src="../assets/img/logo-sidearea-1.png" alt="Logo Maree" />
         </div>
 
+        <!-- MENU DESKTOP  -->
         <div class="ls-menu-desktop d-none d-lg-block">
             <div class="ls-header__right">
                 <ul>
@@ -15,6 +17,7 @@
                         >
                     </li>
                 </ul>
+                <!-- Header right with MENU  -->
                 <div class="ls-header__right-button">
                     <img
                         src="../assets/svg/svg-button-hader.svg"
@@ -24,7 +27,9 @@
             </div>
         </div>
 
+        <!-- MENU MOBILE  -->
         <div class="ls-menu-mobile d-lg-none">
+            <!-- Header right with MENU  -->
             <div class="ls-header__right">
                 <div class="ls-header__right-button">
                     <img
@@ -88,7 +93,7 @@ export default {
                 text-decoration: none;
                 color: black;
                 letter-spacing: 0.2rem;
-                padding: 0 25px;
+                padding: 0 20px;
                 text-transform: uppercase;
                 span.ls_active {
                     box-shadow: inset 0 -6px 0 #f0cebe;
@@ -100,6 +105,7 @@ export default {
         display: flex;
         align-items: center;
         margin-left: 25px;
+        cursor: pointer;
     }
 }
 </style>

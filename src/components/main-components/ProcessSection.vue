@@ -68,6 +68,7 @@ export default {
     .ls-content {
         background-image: url(../../assets/svg/line.svg);
         background-position: top;
+        background-position: left 4.8rem top 0;
         background-repeat: no-repeat;
     }
 }

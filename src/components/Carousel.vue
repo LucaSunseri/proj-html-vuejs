@@ -10,7 +10,7 @@
                             slide[counter].text.italic
                         }}</span>
                     </h2>
-                    <p>{{ slide[counter].text.p }}</p>
+                    <p class="d-none d-md-block">{{ slide[counter].text.p }}</p>
                     <div class="ls-button">
                         <span class="ls-button-text">Read more</span>
                     </div>
@@ -42,9 +42,21 @@
                 <i @click="slideNext" class="fas fa-chevron-circle-right"></i>
             </div>
             <div class="ls-carousel__button-center">
-                <i class="fas fa-circle" @click="counter = 0"></i>
-                <i class="fas fa-circle" @click="counter = 1"></i>
-                <i class="fas fa-circle" @click="counter = 2"></i>
+                <i
+                    class="fas fa-circle"
+                    :class="{ ls_active: counter == 0 }"
+                    @click="counter = 0"
+                ></i>
+                <i
+                    class="fas fa-circle"
+                    :class="{ ls_active: counter == 1 }"
+                    @click="counter = 1"
+                ></i>
+                <i
+                    class="fas fa-circle"
+                    :class="{ ls_active: counter == 2 }"
+                    @click="counter = 2"
+                ></i>
             </div>
         </div>
     </div>
@@ -61,11 +73,11 @@ export default {
             counter: 0,
         };
     },
-    mounted() {
-        setInterval(() => {
-            this.slideNext();
-        }, 40000); //! Sitsemare il tempo
-    },
+    // mounted() {
+    //     setInterval(() => {
+    //         this.slideNext();
+    //     }, 40000); //! Sitsemare il tempo
+    // },
     methods: {
         slideNext() {
             this.counter++;
@@ -157,9 +169,12 @@ export default {
     transform: translateX(-50%);
     .fas {
         color: #e1c0b0;
-        font-size: 10px;
+        font-size: 8px;
         padding: 10px;
         cursor: pointer;
+    }
+    .fas.ls_active {
+        transform: scale(1.5);
     }
 }
 

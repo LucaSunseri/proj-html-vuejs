@@ -7,7 +7,9 @@
                         :src="require(`../../assets/img/${item.image}`)"
                         :alt="item.hover.title"
                     />
-                    <div class="ls-box__hover">
+                    <div
+                        class="ls-box__hover animate__animated animate__fadeIn"
+                    >
                         <h3>{{ item.hover.title }}</h3>
                         <p>{{ item.hover.sub }}</p>
                     </div>
@@ -33,6 +35,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../assets/style/vars.scss";
+@import "~animate.css";
 
 .ls-box {
     cursor: pointer;
@@ -41,6 +44,7 @@ export default {
     }
     .col {
         position: relative;
+        z-index: 400;
         &:hover .ls-box__hover {
             display: block;
         }
@@ -53,6 +57,7 @@ export default {
 .ls-box__hover {
     display: none;
     position: absolute;
+    z-index: 200;
     top: 50%;
     transform: translateY(-50%);
     left: 0;

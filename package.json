@@ -10,6 +10,7 @@
   "dependencies": {
     "@fontsource/playfair-display": "^4.5.1",
     "@fortawesome/fontawesome-free": "^5.15.4",
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.1.3",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
