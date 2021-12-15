@@ -65,7 +65,7 @@ export default {
             transition: all 0.8s ease-in-out;
         }
         &:hover img {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
     }
 }

@@ -47,6 +47,10 @@ export default {
     }
     a {
         color: $color-primary;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+            color: #fff;
+        }
     }
     .fab {
         font-size: 18px;
