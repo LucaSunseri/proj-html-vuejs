@@ -94,7 +94,7 @@ export default {
     margin-top: 15px;
     a {
         text-decoration: none;
-        color: black;
+        color: $color-primary;
         font-weight: 300;
     }
 }

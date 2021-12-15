@@ -57,6 +57,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/style/vars.scss";
+
 .ls-header {
     display: flex;
     justify-content: space-between;
@@ -91,7 +93,7 @@ export default {
             a {
                 display: inline-block;
                 text-decoration: none;
-                color: black;
+                color: $color-primary;
                 letter-spacing: 0.2rem;
                 padding: 0 20px;
                 text-transform: uppercase;

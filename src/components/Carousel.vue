@@ -88,7 +88,7 @@ export default {
     mounted() {
         setInterval(() => {
             this.slideNext();
-        }, 5000);
+        }, 5500);
     },
     methods: {
         slideNext() {
