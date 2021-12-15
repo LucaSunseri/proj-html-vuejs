@@ -95,6 +95,13 @@ export default {
                 letter-spacing: 0.2rem;
                 padding: 0 20px;
                 text-transform: uppercase;
+                &:hover span {
+                    box-shadow: inset 0 -6px 0 #f0cebe;
+                }
+                span {
+                    box-shadow: inset 0 -6px 0 #fff;
+                    transition: all 0.5s linear;
+                }
                 span.ls_active {
                     box-shadow: inset 0 -6px 0 #f0cebe;
                 }

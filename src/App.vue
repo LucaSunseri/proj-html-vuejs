@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Header id />
+        <Header />
         <Carousel />
         <Main />
         <Footer />

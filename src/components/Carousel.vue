@@ -1,61 +1,73 @@
 <template>
     <div class="ls-carousel">
-        <div class="container">
-            <div class="row">
-                <!-- Section Text -->
-                <div class="col-12 col-lg-6 ls-carousel__text">
-                    <h2>
-                        {{ slide[counter].text.title }}
-                        <span class="ls-title__italic">{{
-                            slide[counter].text.italic
-                        }}</span>
-                    </h2>
-                    <p class="d-none d-md-block">{{ slide[counter].text.p }}</p>
-                    <div class="ls-button">
-                        <span class="ls-button-text">Read more</span>
+        <!-- SECTION CONTENT -->
+        <div
+            class="ls-carousel__content animate__animated animate__slideInRight"
+            v-for="(slide, index) in slide"
+            :key="slide.id"
+            :class="{ ls_active: counter == index }"
+        >
+            <div class="container">
+                <div class="row">
+                    <!-- Section Content Text -->
+                    <div class="col-12 col-lg-6">
+                        <div class="ls-carousel__text">
+                            <h2>
+                                {{ slide.text.title }}
+                                <span class="ls-title__italic">{{
+                                    slide.text.italic
+                                }}</span>
+                            </h2>
+                            <p class="d-none d-md-block">{{ slide.text.p }}</p>
+                            <div class="ls-button">
+                                <span class="ls-button-text">Read more</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Section Image -->
-                <div class="col-12 col-lg-6 ls-carousel__image">
-                    <img
-                        v-for="(image, key) in slide[counter].imageCenter"
-                        :key="key"
-                        :src="require(`../assets/img/${image.image}`)"
-                        alt=""
-                        :style="`width: ${image.width}`"
-                    />
-                    <div class="ls-carousel__image-absolute">
-                        <img
-                            v-for="(image, index) in slide[counter]
-                                .imageAbsolute"
-                            :key="index"
-                            :src="require(`../assets/img/${image.image}`)"
-                            alt=""
-                            :style="`top: ${image.top}; left: ${image.left}`"
-                        />
+                    <!-- Section Content Image -->
+                    <div class="col-12 col-lg-6">
+                        <div class="ls-carousel__image">
+                            <img
+                                v-for="(image, key) in slide.imageCenter"
+                                :key="key"
+                                :style="`width: ${image.width}`"
+                                :src="require(`../assets/img/${image.image}`)"
+                                alt=""
+                                class="animate__animated animate__fadeInUp"
+                            />
+                            <div class="ls-carousel__image-absolute">
+                                <img
+                                    v-for="(
+                                        image, index
+                                    ) in slide.imageAbsolute"
+                                    :key="index"
+                                    :style="`top: ${image.top}; left: ${image.left}`"
+                                    :src="
+                                        require(`../assets/img/${image.image}`)
+                                    "
+                                    alt=""
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Section Control -->
-            <div class="ls-carousel__button-side d-none d-lg-block">
+        </div>
+        <!-- SECTION CONTROL -->
+        <div class="ls-carousel__control">
+            <!-- Button Side -->
+            <div class="ls-carousel__control-button-side d-none d-lg-block">
                 <i @click="slidePrev" class="fas fa-chevron-circle-left"></i>
                 <i @click="slideNext" class="fas fa-chevron-circle-right"></i>
             </div>
-            <div class="ls-carousel__button-center">
+            <!-- Button Center -->
+            <div class="ls-carousel__control-button-center">
                 <i
+                    v-for="(item, index) in 3"
+                    :key="index"
                     class="fas fa-circle"
-                    :class="{ ls_active: counter == 0 }"
-                    @click="counter = 0"
-                ></i>
-                <i
-                    class="fas fa-circle"
-                    :class="{ ls_active: counter == 1 }"
-                    @click="counter = 1"
-                ></i>
-                <i
-                    class="fas fa-circle"
-                    :class="{ ls_active: counter == 2 }"
-                    @click="counter = 2"
+                    :class="{ ls_active: counter == index }"
+                    @click="counter = index"
                 ></i>
             </div>
         </div>
@@ -73,11 +85,11 @@ export default {
             counter: 0,
         };
     },
-    // mounted() {
-    //     setInterval(() => {
-    //         this.slideNext();
-    //     }, 40000); //! Sitsemare il tempo
-    // },
+    mounted() {
+        setInterval(() => {
+            this.slideNext();
+        }, 5000);
+    },
     methods: {
         slideNext() {
             this.counter++;
@@ -97,22 +109,37 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/style/vars.scss";
+@import "~animate.css";
 
 .ls-carousel {
     position: relative;
     overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+.ls-carousel__content {
+    display: none;
+    height: 100%;
     .container {
         width: 80%;
-        height: 90%;
-        position: relative;
-        .row {
+        height: 95%;
+    }
+    .row {
+        height: 100%;
+        .col {
             height: 100%;
         }
     }
 }
 
+.ls-carousel__content.ls_active {
+    display: block;
+}
+
 /* Section Left and right */
 .ls-carousel__text {
+    position: relative;
+    z-index: 200;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -140,14 +167,16 @@ export default {
     .ls-carousel__image-absolute {
         img {
             position: absolute;
+            z-index: 100;
         }
     }
 }
 
 /* Button Control */
-.ls-carousel__button-side {
+.ls-carousel__control-button-side {
     .fas {
         position: absolute;
+        z-index: 900;
         top: 50%;
         transform: translateY(-50%);
         font-size: 30px;
@@ -155,15 +184,16 @@ export default {
         cursor: pointer;
     }
     .fa-chevron-circle-left {
-        left: -100px;
+        left: 50px;
     }
     .fa-chevron-circle-right {
-        right: -100px;
+        right: 50px;
     }
 }
 
-.ls-carousel__button-center {
+.ls-carousel__control-button-center {
     position: absolute;
+    z-index: 900;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);

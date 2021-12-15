@@ -1,15 +1,17 @@
 <template>
     <div>
-        <div
-            class="ls-custom"
-            :style="`width: ${width}; height: ${height}; bottom: ${bottom}; right: ${right}; background-color: ${background}`"
-        >
-            <img
-                :src="require(`../../assets/svg/${image}`)"
-                :alt="alt"
-                :style="`width: ${widthimg}`"
-            />
-        </div>
+        <a href="#">
+            <div
+                class="ls-custom"
+                :style="`width: ${width}; height: ${height}; bottom: ${bottom}; right: ${right}; background-color: ${background}`"
+            >
+                <img
+                    :src="require(`../../assets/svg/${image}`)"
+                    :alt="alt"
+                    :style="`width: ${widthimg}`"
+                />
+            </div>
+        </a>
     </div>
 </template>
 
